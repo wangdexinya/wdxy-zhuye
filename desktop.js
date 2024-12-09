@@ -56,7 +56,6 @@ hide_startmenu();
 });
 //开始菜单收回
 	
-
 // 上古代码
 document.querySelectorAll('list.focs').forEach(li => {
     li.addEventListener('click', () => {
@@ -1023,7 +1022,7 @@ let apps = {
                                 <p>Windows 找不到文件 '` + cmd + '\'。请确定文件名是否正确后，再试一次。</p> ',
                                 btn: [
                                     { type: 'main', text: '确定', js: 'closenotice();showwin(\'run\');$(\'#win-run>.open>input\').select();' },
-                                    { type: 'cancel', text: '在 Micrsoft Edge 中搜索', js: 'closenotice();openapp(\'edge\');window.setTimeout(() => {apps.edge.newtab();apps.edge.goto(\'https://www.bing.com/search?q=' + encodeURIComponent(cmd) + '\');}, 300);' }
+                                    { type: 'cancel', text: '在 Micrsoft Edge 中搜索', js: 'closenotice();openapp(\'edge\');window.setTimeout(() => {apps.edge.newtab();apps.edge.goto(\'https://www.baidu.com/s?wd=' + encodeURIComponent(cmd) + '\');}, 300);' }
                                 ]
                             };
                             shownotice('Can-not-open-file');
@@ -1035,7 +1034,7 @@ let apps = {
                             <p>Windows 找不到文件 '` + cmd + '\'。请确定文件名是否正确后，再试一次。</p> ',
                             btn: [
                                 { type: 'main', text: '确定', js: 'closenotice();showwin(\'run\');$(\'#win-run>.open>input\').select();' },
-                                { type: 'cancel', text: '在 Micrsoft Edge 中搜索', js: 'closenotice();openapp(\'edge\');window.setTimeout(() => {apps.edge.newtab();apps.edge.goto(\'https://www.bing.com/search?q=' + encodeURIComponent(cmd) + '\');}, 300);' }
+                                { type: 'cancel', text: '在 Micrsoft Edge 中搜索', js: 'closenotice();openapp(\'edge\');window.setTimeout(() => {apps.edge.newtab();apps.edge.goto(\'https://www.baidu.com/s?wd=' + encodeURIComponent(cmd) + '\');}, 300);' }
                             ]
                         };
                         shownotice('Can-not-open-file');
@@ -2195,7 +2194,7 @@ let apps = {
             return false;
         },
         // 禁止奇奇怪怪的缩进！尽量压行，不要毫无意义地全部格式化和展开！ 
-        path: {folder:{'C:':{folder:{'Program Files':{folder:{'WindowsApps':{folder:{},file:[]},'Microsoft':{folder:{},file:[]}},file:[{name:'about.exe',ico:'icon/about.svg',command:'openapp(\'about\')'},{name:'setting.exe',ico:'icon/setting.svg',command:'openapp(\'setting\')'},]},'Program Files (x86)':{folder:{'Microsoft':{folder:{'Edge':{folder:{'Application':{folder:{'SetupMetrics':{folder:{},file:[]}},file:[{name:'msedge.exe',ico:'icon/edge.svg',command:'openapp(\'edge\')'}]}}}}}}},'Windows':{folder:{'Boot':{folder:{},file:[]},'System':{folder:{},file:[]},'SysWOW64':{folder:{},file:[]},'System32':{folder:{},file:[{name:'calc.exe',ico:'icon/calc.svg',command:'openapp(\'calc\')'},{name:'cmd.exe',ico:'icon/terminal.svg',command:'openapp(\'terminal\')'},{name:'notepad.exe',ico:'icon/notepad.svg',command:'openapp(\'notepad\')'},{name:'taskmgr.exe',ico:'icon/taskmgr.png',command:'openapp(\'taskmgr\')'},{name:'winver.exe',ico:'icon/about.svg',command:'openapp(\'winver\')'},]}},file:[{name:'explorer.exe',ico:'icon/explorer.svg',command:'apps.explorer.newtab()'},{name:'notepad.exe',ico:'icon/notepad.svg',command:'openapp(\'notepad\')'},{name:'py.exe',ico:'icon/python.svg',command:'openapp(\'python\')'},]},'用户':{folder:{'Administrator':{folder:{'文档':{folder:{'IISExpress':{folder:{},file:[]},'PowerToys':{folder:{},file:[]}},file:[{name:'瓶盖介绍.doc',ico:'icon/files/word.png',command:''},{name:'瓶盖质量统计分析.xlsx',ico:'icon/files/excel.png',command:''},]},'图片':{folder:{'本机照片':{folder:{},file:[]},'屏幕截图':{folder:{},file:[]}},file:[{name:'瓶盖构造图.png',ico:'icon/files/img.png',command:''},{name:'可口可乐瓶盖.jpg',ico:'icon/files/img.png',command:''},]},'AppData':{folder:{'Local':{folder:{'Microsoft':{folder:{'Windows':{folder:{'Fonts':{},'TaskManager':{},'Themes':{},'Shell':{},'应用程序快捷方式':{},}},}},'Programs':{folder:{'Python':{folder:{'Python310':{folder:{'DLLs':{},'Doc':{},'include':{},'Lib':{folder:{'site-packages':{},'tkinter':{},}},'libs':{},'Script':{},'share':{},'tcl':{},'Tools':{}},file:[{name:'python.exe',ico:'icon/python.png',command:'openapp(\'python\')'}]}},}}},'Temp':{folder:{}},}},'LocalLow':{folder:{'Microsoft':{folder:{'Windows':{},}},}},'Roaming':{folder:{'Microsoft':{folder:{'Windows':{folder:{'「开始」菜单':{folder:{'程序':{folder:{}},}},}},}},}},},file:[]},'音乐':{folder:{'录音机':{folder:{},file:[]}}}}},'公用':{folder:{'公用文档':{folder:{'IISExpress':{folder:{},file:[]},'PowerToys':{folder:{},file:[]}},file:[]},'公用图片':{folder:{'本机照片':{folder:{},file:[]},'屏幕截图':{folder:{},file:[]}},file:[]},'公用音乐':{folder:{'录音机':{folder:{},file:[]}}}}}}}},file:[]},'D:':{folder:{'Microsoft':{folder:{},file:[]}},file:[{name:'瓶盖结构说明.docx',ico:'icon/files/word.png',command:''},{name:'可口可乐瓶盖历史.pptx',ico:'icon/files/ppt.png',command:''},]}}},
+        path: {folder:{'C:':{folder:{'Program Files':{folder:{'WindowsApps':{folder:{},file:[]},'Microsoft':{folder:{},file:[]}},file:[{name:'about.exe',ico:'icon/about.svg',command:'openapp(\'about\')'},{name:'setting.exe',ico:'icon/setting.svg',command:'openapp(\'setting\')'},]},'Program Files (x86)':{folder:{'Microsoft':{folder:{'Edge':{folder:{'Application':{folder:{'SetupMetrics':{folder:{},file:[]}},file:[{name:'msedge.exe',ico:'icon/edge.svg',command:'openapp(\'edge\')'}]}}}}}}},'Windows':{folder:{'Boot':{folder:{},file:[]},'System':{folder:{},file:[]},'SysWOW64':{folder:{},file:[]},'System32':{folder:{},file:[{name:'calc.exe',ico:'icon/calc.svg',command:'openapp(\'calc\')'},{name:'cmd.exe',ico:'icon/terminal.svg',command:'openapp(\'terminal\')'},{name:'notepad.exe',ico:'icon/notepad.svg',command:'openapp(\'notepad\')'},{name:'taskmgr.exe',ico:'icon/taskmgr.png',command:'openapp(\'taskmgr\')'},{name:'winver.exe',ico:'icon/about.svg',command:'openapp(\'winver\')'},]}},file:[{name:'explorer.exe',ico:'icon/explorer.svg',command:'apps.explorer.newtab()'},{name:'notepad.exe',ico:'icon/notepad.svg',command:'openapp(\'notepad\')'},{name:'py.exe',ico:'icon/python.svg',command:'openapp(\'python\')'},]},'用户':{folder:{'Administrator':{folder:{'文档':{folder:{'IISExpress':{folder:{},file:[]},'PowerToys':{folder:{},file:[]}},file:[{name:'windpws12介绍.doc',ico:'icon/files/word.png',command:''},{name:'windows好评统计分析.xlsx',ico:'icon/files/excel.png',command:''},]},'图片':{folder:{'本机照片':{folder:{},file:[]},'屏幕截图':{folder:{},file:[]}},file:[{name:'系统构造图.png',ico:'icon/files/img.png',command:''},{name:'可口可乐好不好喝.xlsx',ico:'icon/files/excel.png',command:''},]},'AppData':{folder:{'Local':{folder:{'Microsoft':{folder:{'Windows':{folder:{'Fonts':{},'TaskManager':{},'Themes':{},'Shell':{},'应用程序快捷方式':{},}},}},'Programs':{folder:{'Python':{folder:{'Python310':{folder:{'DLLs':{},'Doc':{},'include':{},'Lib':{folder:{'site-packages':{},'tkinter':{},}},'libs':{},'Script':{},'share':{},'tcl':{},'Tools':{}},file:[{name:'python.exe',ico:'icon/python.png',command:'openapp(\'python\')'}]}},}}},'Temp':{folder:{}},}},'LocalLow':{folder:{'Microsoft':{folder:{'Windows':{},}},}},'Roaming':{folder:{'Microsoft':{folder:{'Windows':{folder:{'「开始」菜单':{folder:{'程序':{folder:{}},}},}},}},}},},file:[]},'音乐':{folder:{'录音机':{folder:{},file:[]}}}}},'公用':{folder:{'公用文档':{folder:{'IISExpress':{folder:{},file:[]},'PowerToys':{folder:{},file:[]}},file:[]},'公用图片':{folder:{'本机照片':{folder:{},file:[]},'屏幕截图':{folder:{},file:[]}},file:[]},'公用音乐':{folder:{'录音机':{folder:{},file:[]}}}}}}}},file:[]},'D:':{folder:{'Microsoft':{folder:{},file:[]}},file:[{name:'系统结构说明.docx',ico:'icon/files/word.png',command:''},{name:'Windows12历史.pptx',ico:'icon/files/ppt.png',command:''},]}}},
         history: [],
         historypt: [],
         initHistory: (tab) => {
@@ -2606,14 +2605,14 @@ Micrȯsoft Windows [版本 12.0.39035.7324]
         }
     },
     search: {
-        rand: [{ name: '农夫山泉瓶盖简介.txt', bi: 'text', ty: '文本文档' },
-            { name: '瓶盖构造图.png', bi: 'image', ty: 'PNG 文件' },
-            { name: '瓶盖结构说明.docx', bi: 'richtext', ty: 'Microsoft Word 文档' },
-            { name: '可口可乐瓶盖.jpg', bi: 'image', ty: 'JPG 文件' },
-            { name: '可口可乐瓶盖历史.pptx', bi: 'slides', ty: 'Microsoft Powerpoint 演示文稿' },
-            { name: '瓶盖质量统计分析.xlsx', bi: 'ruled', ty: 'Microsoft Excel 工作表' },
-            { name: '农夫山泉瓶盖.svg', bi: 'image', ty: 'SVG 文件' },
-            { name: '瓶盖介绍.doc', bi: 'richtext', ty: 'Microsoft Word 文档' }],
+        rand: [{ name: '新建文本文件.txt', bi: 'text', ty: '文本文档' },
+            { name: '该文件已损坏', bi: 'text', ty: '不是文件' },
+            { name: 'Windows12.docx', bi: 'richtext', ty: 'Microsoft Word 文档' },
+            { name: 'Win11~win12.jpg', bi: 'image', ty: 'JPG 文件' },
+            { name: 'Windows12历史.pptx', bi: 'slides', ty: 'Microsoft Powerpoint 演示文稿' },
+            { name: 'windows好评统计分析.xlsx', bi: 'ruled', ty: 'Microsoft Excel 工作表' },
+            { name: 'logo.svg', bi: 'image', ty: 'SVG 文件' },
+            { name: 'Windows12介绍.doc', bi: 'richtext', ty: 'Microsoft Word 文档' }],
         search: le => {
             if (le > 0) {
                 $('#search-win>.ans>.list>list').html(
@@ -2781,7 +2780,7 @@ Micrȯsoft Windows [版本 12.0.39035.7324]
                 // 6
                 if (!/^(((ht|f)tps?):\/\/)?([^!@#$%^&*?.\s-]([^!@#$%^&*?.\s]{0,63}[^!@#$%^&*?.\s])?\.)+[a-z]{2,6}\/?/.test(u) && !u.match(/^mainpage.html$/)) {
                     // 启用必应搜索
-                    $('#win-edge>iframe.show').attr('src', 'https://bing.com/search?q=' + encodeURIComponent(u));
+                    $('#win-edge>iframe.show').attr('src', 'https://www.baidu.com/s?wd=' + encodeURIComponent(u));
                     m_tab.rename('edge', u);
                 }
                 // 检测网址是否带有http头
@@ -3195,7 +3194,7 @@ let copilot = {
         注意，对用户说的话那几行中不能出现指令。指令的行中不能有提示或其他任何无关字符，否则系统无法解析。多条指令中间用换行隔开。并且指令的前项和后项，例如openapp和setting之间必须要有空格
         你绝对不能在对用户说的话的中间中提到、引用任意一条指令！你绝不能要求用户执行指令！如果用户让你展示功能，你绝对不能直接输出指令！
         1.指令"{openapp appid}";用于来打开某个应用，其中用在下文"应用的功能介绍"中根据应用名称匹配的id代替"appid"
-        2.指令"{openurl u}";用来在edge浏览器中打开某个url，其中用url地址代替"u"。该指令包含了打开edge浏览器的操作（当用户想要搜索某内容，请用bing搜索）
+        2.指令"{openurl u}";用来在edge浏览器中打开某个url，其中用url地址代替"u"。该指令包含了打开edge浏览器的操作（当用户想要搜索某内容，请用百度搜索）
         3.指令"{feedback copilot}";打开ai助手反馈界面，用于用户想对ai助手的功能等提出反馈时帮助其打开
         4.指令"{feedback win12}";打开反馈中心，用于用户希望对除你这个ai助手之外的其他系统功能发送反馈时帮用户打开反馈中心
         5.指令"{settheme th}";用于切换系统的深色、浅色模式，区别于主题。用"light"表浅色，"dark"表深色，来替换其中的"th"
@@ -4317,7 +4316,6 @@ document.getElementsByTagName('body')[0].onload = () => {
     });
     updateVoiceBallStatus();
     // loadlang();
-    checkOrientation();
 };
 
 let autoUpdate = true;
@@ -4437,22 +4435,3 @@ function setupGlobalKey(){
     });
 }
 setupGlobalKey();
-
-
-function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-}
-
-function checkOrientation() {
-    const container = document.getElementById('orientation-warning');
-    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-    if (isMobileDevice() && isPortrait) {
-        container.style.display = "flex"; // 显示提示
-    } else {
-        container.style.display = "none"; // 隐藏提示
-    }
-}
-
-// 监听屏幕方向变化
-window.addEventListener("resize", checkOrientation);
-window.addEventListener("orientationchange", checkOrientation);
